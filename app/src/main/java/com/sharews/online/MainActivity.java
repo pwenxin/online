@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mButtonToggle = findViewById(R.id.toggle);
+        mAddress = findViewById(R.id.address);
+        mButtonReverseVNC = findViewById(R.id.reverse_vnc);
+
         mButtonToggle.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, MainService.class);
             if(mIsMainServiceRunning) {
@@ -38,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 startService(intent);
             }
+        });
+
+        mButtonReverseVNC.setOnClickListener(view -> {
+
         });
     }
 }
